@@ -1,0 +1,147 @@
+/* ===== BASE ===== */
+body {
+    margin: 0;
+    padding-top: 80px;
+    font-family: "Segoe UI", sans-serif;
+    color: #ffffff;
+    background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url("bg.png") center / cover fixed;
+    overflow-x: hidden;
+}
+/* ===== LIGHT MODE ===== */
+body.light {
+    color: #111;
+    background:
+        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+        url("bg.png") center / cover fixed;
+}
+
+/* light mode cards */
+body.light section,
+body.light .card {
+    background: rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* light mode navbar */
+body.light .navbar {
+    background: rgba(255,255,255,0.7);
+}
+
+/* light mode links */
+body.light .nav-links a {
+    color: #111;
+}
+
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+
+    .nav-links {
+    display: flex;
+    align-items: center;
+    margin-right: 40px; /*  moves links slightly left */
+}
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav-links a:hover {
+    color: #00e5ff;
+}
+
+/* ===== PARTICLES ===== */
+#particles {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 35px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 5;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+}
+
+/* THEME TOGGLE */
+#themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.8;
+}
+
+
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.9s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== PARALLAX ===== */
+.parallax {
+    transform: translateY(0);
+}
